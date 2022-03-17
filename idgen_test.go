@@ -18,13 +18,13 @@ func TestDestructure(t *testing.T){
 	if snowflake.timestamp != GetTimestamp(id) {
 		t.Errorf("GetTimestamp() returned %v, expected %v", GetTimestamp(id), snowflake.timestamp)
 	}
-	if snowflake.workerID != getWorkerID(id) {
+	if snowflake.workerID != GetWorkerID(id) {
 		t.Errorf("getWorkerID() returned %v, expected %v", getWorkerID(id), snowflake.workerID)
 	}
-	if snowflake.processID != getProcessID(id) {
+	if snowflake.processID != GetProcessID(id) {
 		t.Errorf("getProcessID() returned %v, expected %v", getProcessID(id), snowflake.processID)
 	}
-	if snowflake.increment != getIncrement(id) {
+	if snowflake.increment != GetIncrement(id) {
 		t.Errorf("getIncrement() returned %v, expected %v", getIncrement(id), snowflake.increment)
 	}
 }
