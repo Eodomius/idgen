@@ -36,12 +36,12 @@ func Destructure(id uint64) Snowflake {
 func GetTimestamp(id uint64) uint64 {
 	return (id >> 22) + epoch
 }
-func getWorkerID(id uint64) uint64 {
+func GetWorkerID(id uint64) uint64 {
 	return (id >> 17)
 }
-func getProcessID(id uint64) uint64 {
+func GetProcessID(id uint64) uint64 {
 	return (id >> 12)
 }
-func getIncrement(id uint64) uint64 {
+func GetIncrement(id uint64) uint64 {
 	return id
 }
