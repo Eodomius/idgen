@@ -25,7 +25,7 @@ func Generate() uint64 {
 	return ((timestamp << 22) | (workerID << 17) | (processID << 12) | increment)
 }
 
-func Destructure(id uint64) Snowflake {
+func Deconstruct(id uint64) Snowflake {
 	timestamp := (id >> 22) + epoch
 	workerID := (id >> 17)
 	processID := (id >> 12)

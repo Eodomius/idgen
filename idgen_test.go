@@ -14,7 +14,7 @@ func TestGenerate(t *testing.T) {
 }
 func TestDestructure(t *testing.T){
 	id := Generate()
-	snowflake := Destructure(id)
+	snowflake := Deconstruct(id)
 	if snowflake.timestamp != GetTimestamp(id) {
 		t.Errorf("GetTimestamp() returned %v, expected %v", GetTimestamp(id), snowflake.timestamp)
 	}
