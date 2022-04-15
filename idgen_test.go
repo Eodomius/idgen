@@ -36,7 +36,7 @@ func TestPerformances(t *testing.T){
 		Generate()
 	}
 	elapsed := time.Since(start)
-	if elapsed.Nanoseconds() / 1000000 > 7 {
+	if elapsed.Nanoseconds() / 1000000 > 10 {
 		t.Errorf("Generate() took %v", elapsed)
 	}
 	fmt.Println("\n- Generate() took", elapsed, "\n- Nanoseconds per id:", elapsed.Nanoseconds() / 1000000, "\n\u200b")
