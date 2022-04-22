@@ -28,16 +28,3 @@ func TestDestructure(t *testing.T){
 		t.Errorf("GetIncrement() returned %v, expected %v", GetIncrement(id), snowflake.increment)
 	}
 }
-
-func TestPerformances(t *testing.T){
-	// Musure time for Generate()
-	start := time.Now()
-	for i := 0; i < 1000000; i++ {
-		Generate()
-	}
-	elapsed := time.Since(start)
-	if elapsed.Nanoseconds() / 1000000 > 70 {
-		t.Errorf("Generate() took %v", elapsed)
-	}
-	fmt.Println("\n- Generate() took", elapsed, "\n- Nanoseconds per id:", elapsed.Nanoseconds() / 1000000, "\n\u200b")
-}
