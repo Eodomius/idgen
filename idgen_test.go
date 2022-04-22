@@ -2,7 +2,6 @@ package idgen
 
 import (
 	"testing"
-	"time"
 )
 
 func TestGenerate(t *testing.T) {
