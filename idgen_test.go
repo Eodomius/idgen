@@ -1,7 +1,6 @@
 package idgen
 
 import (
-	"fmt"
 	"testing"
 	"time"
 )
